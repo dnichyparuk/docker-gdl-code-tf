@@ -1,0 +1,14 @@
+version: '3.5'
+services:
+    gdlcode29jupyter:
+        image: dnichyparuk/docker-gdl-code-tf:2.9
+        container_name: gdl-code-tf-jupyter
+        volumes:
+            - /var/run/docker.sock:/var/run/docker.sock
+            - /etc/localtime:/etc/localtime:ro
+            - /docker/tf/work:/tf/work
+        ports:
+            - 8877:8888
+        restart: unless-stopped
+        privileged: true
+        runtime: nvidia

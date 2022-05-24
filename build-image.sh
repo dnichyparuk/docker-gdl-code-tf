@@ -1,0 +1,1 @@
+docker build -t dnichyparuk/docker-gdl-code-tf:2.9 .
